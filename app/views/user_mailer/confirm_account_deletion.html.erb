@@ -1,0 +1,9 @@
+<% content_for :salutation do %>
+  Hello <%= @name %>,
+<% end %>
+
+<% content_for :body do %>
+  <p> Your account in <%= @school.name %> has been successfully deleted. </p>
+
+  <p> All your personal information has been removed and you will no longer have access to this school.</p>
+<% end %>

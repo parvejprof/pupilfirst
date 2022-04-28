@@ -1,0 +1,18 @@
+<%
+  topic = @post.topic
+  addressee_name = @addressee.name
+  author_name = @post.creator&.name || "A user"
+  community_name = @post.topic.community.name
+%>
+
+<% content_for :salutation do %>
+  Hello <%= addressee_name %>,
+<% end %>
+
+<% content_for :body do %>
+  <p><%= author_name %> has posted a reply to something you said on the <%= community_name %> community.</p>
+
+  <p>You can <%= link_to "view the reply on the #{community_name} community", topic_url(topic) %>.
+
+  <%= render 'mailers/link_fallback', url: topic_url(topic) %>
+<% end %>
