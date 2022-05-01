@@ -28,10 +28,10 @@ ENV DB_ADAPTER="nulldb"
 ENV SECRET_KEY_BASE="2ab04e6d7919f4f9fd1e25d41455aa26ad21c2a8d053bc00ac02db4d424d97e0716105c620907e6d829329fe275d52673117d432d6d00c9052bec26a82b2de3f"
 
 # AWS requires a lot of keys to initialize.
-ENV AWS_ACCESS_KEY_ID=AKIAX4R7OKRTTVJIMKEW
-ENV AWS_SECRET_ACCESS_KEY=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
+ENV AWS_ACCESS_KEY_ID=provide_access_key_id
+ENV AWS_SECRET_ACCESS_KEY=provide_secret_access_key
 ENV AWS_REGION=us-west-2
-ENV AWS_BUCKET=codepipeline-us-west-2-698217959256
+ENV AWS_BUCKET=provide_bucket_name
 
 # Export the locales.json file.
 RUN bundle exec i18n export
